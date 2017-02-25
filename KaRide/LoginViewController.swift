@@ -31,6 +31,7 @@ class LoginViewController: UIViewController {
         let loginManager = LoginManager()
         loginManager.logIn([ .publicProfile], viewController: self) { loginResult in
             switch loginResult {
+                
             case .failed(let error):
                 print(error)
             case .cancelled:
@@ -38,7 +39,6 @@ class LoginViewController: UIViewController {
             case .success(let grantedPermissions, let declinedPermissions, let accessToken):
                 print("Logged in!")
                 print(accessToken)
-                
                 
                 let connection = GraphRequestConnection()
                 connection.add(GraphRequest(graphPath: "/me?fields=first_name")) { httpResponse, result in
@@ -67,13 +67,16 @@ class LoginViewController: UIViewController {
                             //         print(user)
                             
                             if let userLoged = user {
-                             //   appDelegate.ref.child("dormmates").child(userLoged.uid).setValue(["userID": userID, "name": firstName, "photo": "https://graph.facebook.com/\(userID)/picture?type=large"])
+                                
+                               FirebaseHelper.sharedInstance.ref.child("Users").child(userLoged.uid).child("Public").setValue(["FacebookID": userID, "name": firstName, "photo": "https://graph.facebook.com/\(userID)/picture?type=large"])
                                 
                               //  CurrentUser.sharedInstance.createProfile(name: firstName, imageLink: "https://graph.facebook.com/\(userID)/picture?type=large", description: "no data")
                                 
                               //  print(CurrentUser.sharedInstance.profile)
                                 
-                                //self.performSegue(withIdentifier: "profileoverview", sender: self)
+                                self.performSegue(withIdentifier: "login", sender: self)
+                                
+                            
                                 
                             }
                             

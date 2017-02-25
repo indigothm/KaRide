@@ -10,6 +10,9 @@
 		30EC703C5AD4CE4E73C218D2 /* Pods_KaRide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4D569592FE824C433507E56 /* Pods_KaRide.framework */; };
 		472E29A81E61138200282919 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472E29A71E61138200282919 /* LoginViewController.swift */; };
 		472E29AA1E61152100282919 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 472E29A91E61152100282919 /* GoogleService-Info.plist */; };
+		472E29AC1E612BE300282919 /* FirebaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472E29AB1E612BE300282919 /* FirebaseHelper.swift */; };
+		472E29AE1E61332500282919 /* OfferaRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472E29AD1E61332500282919 /* OfferaRideViewController.swift */; };
+		472E29B41E61436800282919 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472E29B31E61436800282919 /* PickerViewController.swift */; };
 		4798EFAF1E602081000A50FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4798EFAE1E602081000A50FE /* AppDelegate.swift */; };
 		4798EFB61E602081000A50FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4798EFB51E602081000A50FE /* Assets.xcassets */; };
 		4798EFB91E602081000A50FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4798EFB71E602081000A50FE /* LaunchScreen.storyboard */; };
@@ -21,6 +24,9 @@
 		2E5812C8B64CE161BDB06B3E /* Pods-KaRide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KaRide.release.xcconfig"; path = "Pods/Target Support Files/Pods-KaRide/Pods-KaRide.release.xcconfig"; sourceTree = "<group>"; };
 		472E29A71E61138200282919 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		472E29A91E61152100282919 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		472E29AB1E612BE300282919 /* FirebaseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseHelper.swift; sourceTree = "<group>"; };
+		472E29AD1E61332500282919 /* OfferaRideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferaRideViewController.swift; sourceTree = "<group>"; };
+		472E29B31E61436800282919 /* PickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		4798EFAB1E602081000A50FE /* KaRide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KaRide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4798EFAE1E602081000A50FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4798EFB51E602081000A50FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -77,10 +83,13 @@
 				4798EFC21E602819000A50FE /* CitySelectionTableViewController.swift */,
 				4798EFAE1E602081000A50FE /* AppDelegate.swift */,
 				4798EFC41E602891000A50FE /* Main.storyboard */,
+				472E29AD1E61332500282919 /* OfferaRideViewController.swift */,
 				472E29A71E61138200282919 /* LoginViewController.swift */,
 				4798EFB51E602081000A50FE /* Assets.xcassets */,
 				4798EFB71E602081000A50FE /* LaunchScreen.storyboard */,
 				4798EFBA1E602081000A50FE /* Info.plist */,
+				472E29AB1E612BE300282919 /* FirebaseHelper.swift */,
+				472E29B31E61436800282919 /* PickerViewController.swift */,
 			);
 			path = KaRide;
 			sourceTree = "<group>";
@@ -219,7 +228,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				472E29B41E61436800282919 /* PickerViewController.swift in Sources */,
+				472E29AC1E612BE300282919 /* FirebaseHelper.swift in Sources */,
 				472E29A81E61138200282919 /* LoginViewController.swift in Sources */,
+				472E29AE1E61332500282919 /* OfferaRideViewController.swift in Sources */,
 				4798EFAF1E602081000A50FE /* AppDelegate.swift in Sources */,
 				4798EFC31E602819000A50FE /* CitySelectionTableViewController.swift in Sources */,
 			);
