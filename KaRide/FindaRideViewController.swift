@@ -34,6 +34,12 @@ class FindaRideViewController: UIViewController {
         } else if segue.identifier == "to" {
             ProxiHelper.sharedInstance.targetPage = "To"
         }
+        
+        if segue.identifier == "pass" {
+            let controller = segue.destination as! PickerViewController
+            
+            controller.requestType = "pass"
+        }
     }
     
 

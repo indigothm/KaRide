@@ -12,6 +12,15 @@ class ProxiHelper {
     
     static let sharedInstance = ProxiHelper()
     
+    //nav header proxi
     var targetPage = ""
+    var origin = ""
+    
+    //ride offer temp 
+    var offerFrom: String!
+    var offerTo: String!
+    var offerDate: String!
+    var offerPass: String!
+    var offerPrice: String!
     
 }

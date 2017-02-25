@@ -21,6 +21,46 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         SDKApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         FIRApp.configure()
+        
+        //login check
+        
+        if FIRAuth.auth()?.currentUser != nil {
+            print("Logged")
+            
+            
+            
+                
+
+                
+                    self.window = UIWindow(frame: UIScreen.main.bounds)
+                    
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    
+                    let initialViewController = storyboard.instantiateViewController(withIdentifier: "main")
+                    
+                    self.window?.rootViewController = initialViewController
+                    self.window?.makeKeyAndVisible()
+                    
+                
+            
+        } else {
+            //User Not logged in
+            print("Not Logged")
+            
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            
+            let initialViewController = storyboard.instantiateViewController(withIdentifier: "login")
+            
+            self.window?.rootViewController = initialViewController
+            self.window?.makeKeyAndVisible()
+
+            
+        }
+
+        
+        
         return true
     }
 

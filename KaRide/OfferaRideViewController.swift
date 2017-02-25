@@ -16,6 +16,37 @@ class OfferaRideViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    func updateView() {
+    
+        if let fromVal = ProxiHelper.sharedInstance.offerFrom {
+            
+            print(fromVal)
+            
+            fromOutlet.setTitle(fromVal, for: .normal)
+            fromOutlet.setTitleColor(UIColor.black, for: .normal)
+            fromImage.image = UIImage(named: "oval-dark")
+            
+        }
+        
+        if let toVal = ProxiHelper.sharedInstance.offerTo {
+            
+            print(toVal)
+            
+            toOutlet.setTitle(toVal, for: .normal)
+            toOutlet.setTitleColor(UIColor.black, for: .normal)
+            toImage.image = UIImage(named: "oval-dark")
+            
+        }
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        
+       updateView()
+        
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -23,6 +54,16 @@ class OfferaRideViewController: UIViewController {
     }
     
     @IBOutlet weak var dateOutlet: UIButton!
+    @IBOutlet weak var fromOutlet: UIButton!
+    @IBOutlet weak var toOutlet: UIButton!
+    @IBOutlet weak var passOutlet: UIButton!
+    @IBOutlet weak var priceOutlet: UIButton!
+    
+    @IBOutlet weak var fromImage: UIImageView!
+    @IBOutlet weak var toImage: UIImageView!
+    @IBOutlet weak var dateImage: UIImageView!
+    @IBOutlet weak var priceImage: UIImageView!
+    
     
     @IBAction func datePickerDidTouch(_ sender: Any) {
     }
@@ -35,6 +76,7 @@ class OfferaRideViewController: UIViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         
+            ProxiHelper.sharedInstance.origin = "offer"
         
             if segue.identifier == "from" {
                ProxiHelper.sharedInstance.targetPage = "From"

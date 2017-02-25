@@ -56,6 +56,16 @@ class CitySelectionTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         dismiss(animated: true, completion: nil)
+        
+        if ProxiHelper.sharedInstance.origin == "offer" && ProxiHelper.sharedInstance.targetPage == "To" {
+            
+            ProxiHelper.sharedInstance.offerTo = cities[indexPath.row]
+            
+        } else if ProxiHelper.sharedInstance.origin == "offer" && ProxiHelper.sharedInstance.targetPage == "From" {
+            
+            ProxiHelper.sharedInstance.offerFrom = cities[indexPath.row]
+            
+        }
     }
 
     /*
