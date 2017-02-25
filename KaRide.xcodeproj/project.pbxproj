@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30EC703C5AD4CE4E73C218D2 /* Pods_KaRide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4D569592FE824C433507E56 /* Pods_KaRide.framework */; };
+		472E29A81E61138200282919 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472E29A71E61138200282919 /* LoginViewController.swift */; };
+		472E29AA1E61152100282919 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 472E29A91E61152100282919 /* GoogleService-Info.plist */; };
 		4798EFAF1E602081000A50FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4798EFAE1E602081000A50FE /* AppDelegate.swift */; };
-		4798EFB11E602081000A50FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4798EFB01E602081000A50FE /* ViewController.swift */; };
 		4798EFB61E602081000A50FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4798EFB51E602081000A50FE /* Assets.xcassets */; };
 		4798EFB91E602081000A50FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4798EFB71E602081000A50FE /* LaunchScreen.storyboard */; };
 		4798EFC31E602819000A50FE /* CitySelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4798EFC21E602819000A50FE /* CitySelectionTableViewController.swift */; };
@@ -16,14 +18,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E5812C8B64CE161BDB06B3E /* Pods-KaRide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KaRide.release.xcconfig"; path = "Pods/Target Support Files/Pods-KaRide/Pods-KaRide.release.xcconfig"; sourceTree = "<group>"; };
+		472E29A71E61138200282919 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		472E29A91E61152100282919 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4798EFAB1E602081000A50FE /* KaRide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KaRide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4798EFAE1E602081000A50FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4798EFB01E602081000A50FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4798EFB51E602081000A50FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4798EFB81E602081000A50FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4798EFBA1E602081000A50FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4798EFC21E602819000A50FE /* CitySelectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CitySelectionTableViewController.swift; sourceTree = "<group>"; };
 		4798EFC41E602891000A50FE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		C2768E9188168E4506B3E4BC /* Pods-KaRide.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KaRide.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KaRide/Pods-KaRide.debug.xcconfig"; sourceTree = "<group>"; };
+		F4D569592FE824C433507E56 /* Pods_KaRide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KaRide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30EC703C5AD4CE4E73C218D2 /* Pods_KaRide.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0180098D9155B88B9DC179EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F4D569592FE824C433507E56 /* Pods_KaRide.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4798EFA21E602080000A50FE = {
 			isa = PBXGroup;
 			children = (
 				4798EFAD1E602081000A50FE /* KaRide */,
 				4798EFAC1E602081000A50FE /* Products */,
+				6C269647ADD6F33B81B3D0A4 /* Pods */,
+				0180098D9155B88B9DC179EA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +73,25 @@
 		4798EFAD1E602081000A50FE /* KaRide */ = {
 			isa = PBXGroup;
 			children = (
+				472E29A91E61152100282919 /* GoogleService-Info.plist */,
 				4798EFC21E602819000A50FE /* CitySelectionTableViewController.swift */,
 				4798EFAE1E602081000A50FE /* AppDelegate.swift */,
-				4798EFB01E602081000A50FE /* ViewController.swift */,
 				4798EFC41E602891000A50FE /* Main.storyboard */,
+				472E29A71E61138200282919 /* LoginViewController.swift */,
 				4798EFB51E602081000A50FE /* Assets.xcassets */,
 				4798EFB71E602081000A50FE /* LaunchScreen.storyboard */,
 				4798EFBA1E602081000A50FE /* Info.plist */,
 			);
 			path = KaRide;
+			sourceTree = "<group>";
+		};
+		6C269647ADD6F33B81B3D0A4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C2768E9188168E4506B3E4BC /* Pods-KaRide.debug.xcconfig */,
+				2E5812C8B64CE161BDB06B3E /* Pods-KaRide.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4798EFBD1E602081000A50FE /* Build configuration list for PBXNativeTarget "KaRide" */;
 			buildPhases = (
+				BA77B257C82FABF158C40133 /* [CP] Check Pods Manifest.lock */,
 				4798EFA71E602081000A50FE /* Sources */,
 				4798EFA81E602081000A50FE /* Frameworks */,
 				4798EFA91E602081000A50FE /* Resources */,
+				0C2C88C78B62889F4B330C72 /* [CP] Embed Pods Frameworks */,
+				4526F38D9AC967494BBCC984 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -128,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4798EFC51E602891000A50FE /* Main.storyboard in Resources */,
+				472E29AA1E61152100282919 /* GoogleService-Info.plist in Resources */,
 				4798EFB91E602081000A50FE /* LaunchScreen.storyboard in Resources */,
 				4798EFB61E602081000A50FE /* Assets.xcassets in Resources */,
 			);
@@ -135,12 +166,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0C2C88C78B62889F4B330C72 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KaRide/Pods-KaRide-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4526F38D9AC967494BBCC984 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KaRide/Pods-KaRide-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA77B257C82FABF158C40133 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4798EFA71E602081000A50FE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4798EFB11E602081000A50FE /* ViewController.swift in Sources */,
+				472E29A81E61138200282919 /* LoginViewController.swift in Sources */,
 				4798EFAF1E602081000A50FE /* AppDelegate.swift in Sources */,
 				4798EFC31E602819000A50FE /* CitySelectionTableViewController.swift in Sources */,
 			);
@@ -253,6 +332,7 @@
 		};
 		4798EFBE1E602081000A50FE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2768E9188168E4506B3E4BC /* Pods-KaRide.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DJE44ZPPJW;
@@ -266,6 +346,7 @@
 		};
 		4798EFBF1E602081000A50FE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E5812C8B64CE161BDB06B3E /* Pods-KaRide.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DJE44ZPPJW;
@@ -296,6 +377,7 @@
 				4798EFBF1E602081000A50FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
