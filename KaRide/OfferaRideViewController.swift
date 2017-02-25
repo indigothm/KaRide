@@ -27,14 +27,36 @@ class OfferaRideViewController: UIViewController {
     @IBAction func datePickerDidTouch(_ sender: Any) {
     }
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        
+            if segue.identifier == "from" {
+               ProxiHelper.sharedInstance.targetPage = "From"
+            } else if segue.identifier == "to" {
+               ProxiHelper.sharedInstance.targetPage = "To"
+            }
+        
+            if segue.identifier == "price" {
+                 let controller = segue.destination as! PickerViewController
+                
+                controller.requestType = "price"
+                
+            } else if segue.identifier == "pass" {
+                let controller = segue.destination as! PickerViewController
+                
+                controller.requestType = "pass"
+            }
+        
+        
+        
     }
-    */
+ 
+    
 
 }

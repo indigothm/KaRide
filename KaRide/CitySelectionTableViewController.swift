@@ -9,6 +9,8 @@
 import UIKit
 
 class CitySelectionTableViewController: UITableViewController {
+    
+    let cities = ["Canberra", "Sydney", "Melbourne"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +20,7 @@ class CitySelectionTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        self.navigationItem.title = ProxiHelper.sharedInstance.targetPage
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,19 +37,24 @@ class CitySelectionTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 4
+        return cities.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "city", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "city", for: indexPath) as! CitySelectionTableViewCell
 
         // Configure the cell...
+        cell.cityLabel.text = cities[indexPath.row]
 
         return cell
     }
     
     @IBAction func dismissView(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         dismiss(animated: true, completion: nil)
     }
 

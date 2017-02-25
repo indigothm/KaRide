@@ -10,17 +10,27 @@ import UIKit
 
 class PickerViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
+    var prices = [String]()
+    var passangers = ["1","2"]
+    var requestType = "price"
     var pickerData = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         
         for i in 1...50 {
-         pickerData.append("$\(i)")
+            prices.append("$\(i)")
+        }
+
+
+        // Do any additional setup after loading the view.
+        if requestType == "price" {
+            pickerData = prices
+        } else if requestType == "pass" {
+            pickerData = passangers
         }
         
+
         picker.delegate = self
         picker.dataSource = self
         
@@ -58,10 +68,17 @@ class PickerViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     
     @IBAction func shadowDidTouch(_ sender: Any) {
         
+        //dismiss selection
         dismiss(animated: true, completion: nil)
         
     }
 
+    @IBAction func doneDidTouch(_ sender: Any) {
+        
+         //save result
+         dismiss(animated: true, completion: nil)
+        
+    }
     /*
     // MARK: - Navigation
 
