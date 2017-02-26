@@ -14,5 +14,6 @@ target 'KaRide' do
   pod 'FacebookLogin'
   pod 'FacebookShare'
   pod 'DatePickerDialog’
+  pod 'IQKeyboardManagerSwift'
 
 end

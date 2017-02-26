@@ -13,12 +13,12 @@ protocol UpdateViewDelegateProtocol: class {
 }
 
 class DatePickerViewController: UIViewController {
-
+    
     var delegate: UpdateViewDelegateProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         
         datePicker.minimumDate = Date()
         
@@ -27,6 +27,7 @@ class DatePickerViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

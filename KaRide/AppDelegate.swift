@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import FacebookCore
 import FacebookLogin
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -59,7 +60,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
         }
 
-        
+        IQKeyboardManager.sharedManager().enable = true
+
         
         return true
     }
