@@ -10,6 +10,8 @@ import UIKit
 
 class PickerViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
+    var delegate: UpdateViewDelegateProtocol?
+    
     var prices = [String]()
     var passangers = ["1","2"]
     var requestType = "price"
@@ -55,7 +57,12 @@ class PickerViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         return pickerData[row]
     }
     
+    var valueSelected: String!
+    
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        self.valueSelected = pickerData[row] as String
+        print(self.valueSelected)
         
     }
 
@@ -75,6 +82,29 @@ class PickerViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
 
     @IBAction func doneDidTouch(_ sender: Any) {
         
+        print(ProxiHelper.sharedInstance.origin)
+        print(self.requestType)
+        
+        if ProxiHelper.sharedInstance.origin == "offer" && self.requestType == "price" {
+            
+            if let val = valueSelected {
+                ProxiHelper.sharedInstance.offerPrice = val
+            }
+            
+        } else if ProxiHelper.sharedInstance.origin == "offer" && self.requestType == "pass" {
+            
+            if let val = valueSelected {
+                ProxiHelper.sharedInstance.offerPass = val
+            }
+            
+        }
+        
+        if let delegateObj = delegate {
+            
+            delegateObj.updateView()
+        }
+
+
          //save result
          dismiss(animated: true, completion: nil)
         

@@ -19,7 +19,7 @@ class ProxiHelper {
     //ride offer temp 
     var offerFrom: String!
     var offerTo: String!
-    var offerDate: String!
+    var offerDate: Date!
     var offerPass: String!
     var offerPrice: String!
     

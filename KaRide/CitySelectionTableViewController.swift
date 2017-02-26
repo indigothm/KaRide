@@ -10,17 +10,27 @@ import UIKit
 
 class CitySelectionTableViewController: UITableViewController {
     
-    let cities = ["Canberra", "Sydney", "Melbourne"]
+    var cities = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        cities = ["Canberra", "Sydney", "Melbourne"]
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         self.navigationItem.title = ProxiHelper.sharedInstance.targetPage
+        if ProxiHelper.sharedInstance.targetPage == "From" {
+            if let mirrorVal = ProxiHelper.sharedInstance.offerTo {
+                cities = cities.filter() {$0 != mirrorVal}
+            }
+        } else {
+            if let mirrorVal = ProxiHelper.sharedInstance.offerFrom {
+                cities = cities.filter() {$0 != mirrorVal}
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {

@@ -8,10 +8,18 @@
 
 import UIKit
 
+protocol UpdateViewDelegateProtocol: class {
+    func updateView()
+}
+
 class DatePickerViewController: UIViewController {
 
+    var delegate: UpdateViewDelegateProtocol?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         datePicker.minimumDate = Date()
         
         let date = Calendar.current.date(byAdding: .month, value: 1, to: Date())
@@ -33,7 +41,24 @@ class DatePickerViewController: UIViewController {
     
     
     @IBAction func dismissDidTouch(_ sender: Any) {
+        
+         ProxiHelper.sharedInstance.offerDate =  datePicker.date
+        
+        if ProxiHelper.sharedInstance.origin == "offer" {
+            
+            ProxiHelper.sharedInstance.offerDate = datePicker.date
+            
+            if let delegateObj = delegate {
+                
+                delegateObj.updateView()
+            }
+            
+        }
+        
+       
+        
          dismiss(animated: true, completion: nil)
+        
     }
     /*
     // MARK: - Navigation
