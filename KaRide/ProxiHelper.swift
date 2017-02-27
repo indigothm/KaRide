@@ -16,11 +16,17 @@ class ProxiHelper {
     var targetPage = ""
     var origin = ""
     
-    //ride offer temp 
+    //ride offer - main
     var offerFrom: String!
     var offerTo: String!
     var offerDate: Date!
     var offerPass: String!
     var offerPrice: String!
+    
+    //ride offer - details
+    var offerDep: Date!
+    var offerAr: Date!
+    var offerModel: String!
+    var offerContact: String!
     
 }

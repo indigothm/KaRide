@@ -8,7 +8,14 @@
 
 import UIKit
 
+
 class TimePickerViewController: UIViewController {
+    
+    var delegate: UpdateViewDelegateProtocol?
+    
+    var requestType = "Ar"
+
+    @IBOutlet weak var picker: UIDatePicker!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +38,22 @@ class TimePickerViewController: UIViewController {
     @IBAction func dismissDidTouch(_ sender: Any) {
         
         dismiss(animated: true, completion: nil)
+        
+        if requestType == "Ar" {
+        
+           ProxiHelper.sharedInstance.offerAr = picker.date
+            
+        } else if requestType == "Dep" {
+        
+            ProxiHelper.sharedInstance.offerDep = picker.date
+            
+        }
+        
+        if let delegateObj = delegate {
+            
+            delegateObj.updateView()
+            
+        }
         
     }
     /*
