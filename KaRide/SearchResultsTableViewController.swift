@@ -1,53 +1,23 @@
 //
-//  CitySelectionTableViewController.swift
+//  SearchResultsTableViewController.swift
 //  KaRide
 //
-//  Created by Elliot Licht on 24/02/2017.
+//  Created by Elliot Licht on 28/02/2017.
 //  Copyright © 2017 Ilia Tikhomirov. All rights reserved.
 //
 
 import UIKit
 
-class CitySelectionTableViewController: UITableViewController {
-    
-    var cities = [String]()
+class SearchResultsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        cities = ["Canberra", "Sydney", "Melbourne"]
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        self.navigationItem.title = ProxiHelper.sharedInstance.targetPage
-        
-        if ProxiHelper.sharedInstance.origin == "offer" {
-        
-        if ProxiHelper.sharedInstance.targetPage == "From" {
-            if let mirrorVal = ProxiHelper.sharedInstance.offerTo {
-                cities = cities.filter() {$0 != mirrorVal}
-            }
-        } else {
-            if let mirrorVal = ProxiHelper.sharedInstance.offerFrom {
-                cities = cities.filter() {$0 != mirrorVal}
-            }
-        }
-        } else if ProxiHelper.sharedInstance.origin == "search" {
-            
-            if ProxiHelper.sharedInstance.targetPage == "From" {
-                if let mirrorVal = ProxiHelper.sharedInstance.searchTo {
-                    cities = cities.filter() {$0 != mirrorVal}
-                }
-            } else {
-                if let mirrorVal = ProxiHelper.sharedInstance.searchFrom {
-                    cities = cities.filter() {$0 != mirrorVal}
-                }
-            }
-
-            
-        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,51 +29,23 @@ class CitySelectionTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 0
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return cities.count
+        return 0
     }
 
-    
+    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "city", for: indexPath) as! CitySelectionTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
         // Configure the cell...
-        cell.cityLabel.text = cities[indexPath.row]
 
         return cell
     }
-    
-    @IBAction func dismissView(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        dismiss(animated: true, completion: nil)
-        
-        if ProxiHelper.sharedInstance.origin == "offer" && ProxiHelper.sharedInstance.targetPage == "To" {
-            
-            ProxiHelper.sharedInstance.offerTo = cities[indexPath.row]
-            
-        } else if ProxiHelper.sharedInstance.origin == "offer" && ProxiHelper.sharedInstance.targetPage == "From" {
-            
-            ProxiHelper.sharedInstance.offerFrom = cities[indexPath.row]
-            
-        }
-        
-        if ProxiHelper.sharedInstance.origin == "search" && ProxiHelper.sharedInstance.targetPage == "To" {
-            
-            ProxiHelper.sharedInstance.searchTo = cities[indexPath.row]
-        
-        } else if ProxiHelper.sharedInstance.origin == "search" && ProxiHelper.sharedInstance.targetPage == "From" {
-            
-            ProxiHelper.sharedInstance.searchFrom = cities[indexPath.row]
-            
-        }
-    }
+    */
 
     /*
     // Override to support conditional editing of the table view.

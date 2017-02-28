@@ -29,4 +29,10 @@ class ProxiHelper {
     var offerModel: String!
     var offerContact: String!
     
+    //ride search - params
+    var searchFrom: String!
+    var searchTo: String!
+    var searchDate: Date!
+    var searchPass: String!
+    
 }

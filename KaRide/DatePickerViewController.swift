@@ -54,6 +54,16 @@ class DatePickerViewController: UIViewController {
                 delegateObj.updateView()
             }
             
+        } else if ProxiHelper.sharedInstance.origin == "search" {
+            
+            ProxiHelper.sharedInstance.searchDate = datePicker.date
+            
+            if let delegateObj = delegate {
+                
+                delegateObj.updateView()
+            }
+
+            
         }
         
        

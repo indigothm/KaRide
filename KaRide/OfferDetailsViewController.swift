@@ -83,7 +83,7 @@ class OfferDetailsViewController: UIViewController, UpdateViewDelegateProtocol, 
             timeformatter.timeStyle = .short
 
             let dateformatter = DateFormatter()
-            dateformatter.dateStyle = DateFormatter.Style.long
+            dateformatter.dateStyle = DateFormatter.Style.short
             dateformatter.timeStyle = .none
             
             FirebaseHelper.sharedInstance.createRideOffer(

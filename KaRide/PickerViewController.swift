@@ -87,6 +87,10 @@ class PickerViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         
         if ProxiHelper.sharedInstance.origin == "offer" && self.requestType == "price" {
             
+            if valueSelected == nil {
+              ProxiHelper.sharedInstance.offerPrice = "$1"
+            }
+            
             if let val = valueSelected {
                 ProxiHelper.sharedInstance.offerPrice = val
             }
@@ -98,6 +102,17 @@ class PickerViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
             }
             
         }
+        
+            
+        if ProxiHelper.sharedInstance.origin == "search" && self.requestType == "pass" {
+
+            
+            if let val = self.valueSelected {
+                ProxiHelper.sharedInstance.searchPass = val
+            }
+            
+        }
+
         
         if let delegateObj = delegate {
             
