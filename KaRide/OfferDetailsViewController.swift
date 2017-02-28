@@ -78,15 +78,23 @@ class OfferDetailsViewController: UIViewController, UpdateViewDelegateProtocol, 
             
             ProxiHelper.sharedInstance.offerContact = contactOutlet.text!
             
+            let timeformatter = DateFormatter()
+            timeformatter.dateStyle = DateFormatter.Style.none
+            timeformatter.timeStyle = .short
+
+            let dateformatter = DateFormatter()
+            dateformatter.dateStyle = DateFormatter.Style.long
+            dateformatter.timeStyle = .none
+            
             FirebaseHelper.sharedInstance.createRideOffer(
                 
                 from: ProxiHelper.sharedInstance.offerFrom!,
                 to: ProxiHelper.sharedInstance.offerTo!,
-                date: ProxiHelper.sharedInstance.offerDate!,
+                date: dateformatter.string(from: ProxiHelper.sharedInstance.offerDate),
                 pass: ProxiHelper.sharedInstance.offerPass!,
                 price: ProxiHelper.sharedInstance.offerPrice!,
-                depTime: ProxiHelper.sharedInstance.offerDep!,
-                arTime: ProxiHelper.sharedInstance.offerAr!,
+                depTime: timeformatter.string(from: ProxiHelper.sharedInstance.offerDep),
+                arTime: timeformatter.string(from: ProxiHelper.sharedInstance.offerAr),
                 model: ProxiHelper.sharedInstance.offerModel!,
                 contact: ProxiHelper.sharedInstance.offerContact!)
             

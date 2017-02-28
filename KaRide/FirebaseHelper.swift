@@ -16,7 +16,7 @@ class FirebaseHelper {
     
     let ref = FIRDatabase.database().reference()
     
-    func createRideOffer(from: String, to: String, date: Date, pass: String!, price: String, depTime: Date, arTime: Date, model: String, contact: String) {
+    func createRideOffer(from: String, to: String, date: String, pass: String!, price: String, depTime: String, arTime: String, model: String, contact: String) {
         
         let userID = FIRAuth.auth()?.currentUser?.uid
         
@@ -29,11 +29,11 @@ class FirebaseHelper {
                 "driver": userID,
                 "from": from,
                 "to": to,
-                "date": String(describing: date),
+                "date": date,
                 "pass": pass,
                 "price": price,
-                "depTime": String(describing: depTime),
-                "arTime": String(describing: arTime),
+                "depTime": depTime,
+                "arTime": arTime,
                 "model": model,
                 "contact": contact
             
