@@ -1,14 +1,14 @@
 //
-//  SearchResultsTableViewController.swift
+//  YourRidesTableViewController.swift
 //  KaRide
 //
-//  Created by Elliot Licht on 28/02/2017.
+//  Created by Elliot Licht on 01/03/2017.
 //  Copyright © 2017 Ilia Tikhomirov. All rights reserved.
 //
 
 import UIKit
 
-class SearchResultsTableViewController: UITableViewController {
+class YourRidesTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,9 +36,10 @@ class SearchResultsTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return 2
     }
+
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ride", for: indexPath) as! RideTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "rideCell", for: indexPath)
 
         // Configure the cell...
 

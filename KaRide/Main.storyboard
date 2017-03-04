@@ -461,7 +461,7 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="Yv0-f6-9KL" kind="show" id="GFw-gK-wrB"/>
+                                            <segue destination="Yv0-f6-9KL" kind="show" identifier="showResults" id="GFw-gK-wrB"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -998,7 +998,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="IrC-6L-Zbr">
-                                <rect key="frame" x="80" y="90" width="81.5" height="17"/>
+                                <rect key="frame" x="80" y="90.5" width="81.5" height="17"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Driver:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w4e-8s-b0D">
                                         <rect key="frame" x="0.0" y="0.0" width="45.5" height="17"/>
@@ -1022,7 +1022,7 @@
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xHm-1b-mLR">
-                                <rect key="frame" x="80" y="181" width="265" height="1"/>
+                                <rect key="frame" x="80" y="181.5" width="265" height="1"/>
                                 <color key="backgroundColor" red="0.91764705879999997" green="0.91764705879999997" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="kG0-re-wUm"/>
@@ -1046,7 +1046,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="FjQ-gv-DRU">
-                                <rect key="frame" x="80" y="144" width="126.5" height="17"/>
+                                <rect key="frame" x="80" y="144.5" width="126.5" height="17"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Arrival Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XVo-gL-trv">
                                         <rect key="frame" x="0.0" y="0.0" width="85.5" height="17"/>
@@ -1063,7 +1063,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="itL-UT-TBW">
-                                <rect key="frame" x="80" y="117" width="88" height="17"/>
+                                <rect key="frame" x="80" y="117.5" width="88" height="17"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Car:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V3c-Xi-PcM">
                                         <rect key="frame" x="0.0" y="0.0" width="28.5" height="17"/>
@@ -1080,7 +1080,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="gSW-xL-qzc">
-                                <rect key="frame" x="30" y="207" width="315" height="115"/>
+                                <rect key="frame" x="30" y="207.5" width="315" height="115"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VhY-jB-l3d">
                                         <rect key="frame" x="0.0" y="0.0" width="315" height="50"/>
@@ -1151,33 +1151,13 @@
         <scene sceneID="8gg-UQ-C7C">
             <objects>
                 <tableViewController title="Canberra - Sydney" id="Yv0-f6-9KL" customClass="SearchResultsTableViewController" customModule="KaRide" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="fAE-V4-r5M">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="156" sectionHeaderHeight="28" sectionFooterHeight="28" id="fAE-V4-r5M">
                         <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="54" id="fLp-Zq-AmS">
-                                <rect key="frame" x="0.0" y="28" width="375" height="54"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fLp-Zq-AmS" id="tW7-dO-g61">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="54"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="March 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANU-64-ccl">
-                                            <rect key="frame" x="28" y="30" width="77" height="24"/>
-                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="ANU-64-ccl" firstAttribute="top" secondItem="tW7-dO-g61" secondAttribute="top" constant="30" id="7iG-ty-iyj"/>
-                                        <constraint firstItem="ANU-64-ccl" firstAttribute="leading" secondItem="tW7-dO-g61" secondAttribute="leading" constant="28" id="T4l-6S-Nt9"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="156" id="MYI-Vo-oeu">
-                                <rect key="frame" x="0.0" y="82" width="375" height="156"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ride" rowHeight="156" id="MYI-Vo-oeu" customClass="RideTableViewCell" customModule="KaRide" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="156"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MYI-Vo-oeu" id="CbT-B9-0bW">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="156"/>
@@ -1186,7 +1166,7 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="B45-kS-l7r">
                                             <rect key="frame" x="28" y="20" width="130.5" height="34"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="K5J-JR-THE">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar-s" translatesAutoresizingMaskIntoConstraints="NO" id="K5J-JR-THE">
                                                     <rect key="frame" x="0.0" y="0.0" width="34" height="34"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="34" id="AzQ-8W-Vnk"/>
@@ -1266,6 +1246,9 @@
                                         <constraint firstItem="B45-kS-l7r" firstAttribute="top" secondItem="CbT-B9-0bW" secondAttribute="top" constant="20" id="wdW-zd-UqP"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="avatarOutlet" destination="K5J-JR-THE" id="RMa-f4-BcE"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -1281,13 +1264,13 @@
         <!--Your Rides-->
         <scene sceneID="O1U-W7-VLM">
             <objects>
-                <tableViewController id="cZY-34-cHh" sceneMemberID="viewController">
+                <tableViewController id="cZY-34-cHh" customClass="YourRidesTableViewController" customModule="KaRide" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="116" sectionHeaderHeight="28" sectionFooterHeight="28" id="H9r-cg-JEo">
                         <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="C6t-Yb-aT2">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="rideCell" id="C6t-Yb-aT2" customClass="YourRidesTableViewCell" customModule="KaRide" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="116"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="C6t-Yb-aT2" id="D1m-1r-sr3">
@@ -1329,25 +1312,27 @@
                                                 </stackView>
                                             </subviews>
                                         </stackView>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car" translatesAutoresizingMaskIntoConstraints="NO" id="kMg-MU-XYP">
-                                            <rect key="frame" x="21" y="39" width="38" height="38"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar-s" translatesAutoresizingMaskIntoConstraints="NO" id="i4k-Ng-HoA">
+                                            <rect key="frame" x="15" y="33" width="50" height="50"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="38" id="lnW-Uz-Vw5"/>
-                                                <constraint firstAttribute="height" constant="38" id="pqt-OJ-iP5"/>
+                                                <constraint firstAttribute="width" constant="50" id="4Zi-aV-xGT"/>
+                                                <constraint firstAttribute="height" constant="50" id="EcB-ot-mJE"/>
                                             </constraints>
                                         </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="Cbo-CY-Esh" firstAttribute="leading" secondItem="D1m-1r-sr3" secondAttribute="leading" constant="80" id="2b7-op-oxw"/>
-                                        <constraint firstItem="kMg-MU-XYP" firstAttribute="leading" secondItem="D1m-1r-sr3" secondAttribute="leading" constant="21" id="CtT-GK-Vdi"/>
                                         <constraint firstAttribute="trailing" secondItem="oK9-IP-OEL" secondAttribute="trailing" constant="30" id="HE3-PO-jYK"/>
                                         <constraint firstItem="oK9-IP-OEL" firstAttribute="leading" secondItem="D1m-1r-sr3" secondAttribute="leading" constant="80" id="Nhu-rq-5nG"/>
-                                        <constraint firstItem="Cbo-CY-Esh" firstAttribute="leading" secondItem="kMg-MU-XYP" secondAttribute="trailing" constant="21" id="ZFh-9g-JvO"/>
-                                        <constraint firstItem="kMg-MU-XYP" firstAttribute="centerY" secondItem="D1m-1r-sr3" secondAttribute="centerY" id="hBa-Zd-AFj"/>
+                                        <constraint firstItem="i4k-Ng-HoA" firstAttribute="centerY" secondItem="D1m-1r-sr3" secondAttribute="centerY" id="VEo-NQ-vU7"/>
+                                        <constraint firstItem="i4k-Ng-HoA" firstAttribute="leading" secondItem="D1m-1r-sr3" secondAttribute="leading" constant="15" id="ZK0-zt-YEm"/>
                                         <constraint firstItem="Cbo-CY-Esh" firstAttribute="centerY" secondItem="D1m-1r-sr3" secondAttribute="centerY" id="jOJ-cJ-20l"/>
                                         <constraint firstAttribute="bottom" secondItem="oK9-IP-OEL" secondAttribute="bottom" id="jwq-9x-H8n"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="avatarOutlet" destination="i4k-Ng-HoA" id="loL-1z-OLo"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -1428,7 +1413,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KaRide" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZ2-re-eYK">
-                                <rect key="frame" x="137" y="315" width="101" height="36"/>
+                                <rect key="frame" x="137" y="315.5" width="101" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1560,6 +1545,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="avatar-s" width="441" height="429"/>
         <image name="calendar" width="18" height="20"/>
         <image name="car" width="30" height="27"/>
         <image name="carmodel" width="18" height="16"/>
@@ -1579,4 +1565,5 @@
         <segue reference="cr9-uz-Xgt"/>
         <segue reference="tcC-XS-HJl"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
 </document>

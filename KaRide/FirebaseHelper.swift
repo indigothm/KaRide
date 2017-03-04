@@ -41,5 +41,30 @@ class FirebaseHelper {
         
     }
     
+    func findARideWithParameters(from: String, to: String, date: String, pass: String ) {
+        
+        ref.child("rides").observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            
+            let rides = snapshot.value as? [String : AnyObject]
+            print(rides)
+            
+            //create ride object
+            //return array of results
+            
+            for ride in rides! {
+                
+                print(ride.value as! [String: String])
+                
+                
+            }
+            
+            // ...
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+        
+    }
+    
     
 }

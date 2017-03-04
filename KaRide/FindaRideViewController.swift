@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class FindaRideViewController: UIViewController, UpdateViewDelegateProtocol {
     
     //outlets
@@ -116,6 +117,12 @@ class FindaRideViewController: UIViewController, UpdateViewDelegateProtocol {
             
             controller.requestType = "pass"
             controller.delegate = self
+        }
+        
+        if segue.identifier == "showResults" {
+            
+            FirebaseHelper.sharedInstance.findARideWithParameters(from: (fromOutlet.titleLabel?.text)!, to: (toOutlet.titleLabel?.text)!, date: (dateOutlet.titleLabel?.text)!, pass: passOutlet.text!)
+            
         }
     }
     
