@@ -47,14 +47,24 @@ class FirebaseHelper {
             
             
             let rides = snapshot.value as? [String : AnyObject]
-            print(rides)
-            
-            //create ride object
-            //return array of results
+                        
             
             for ride in rides! {
                 
-                print(ride.value as! [String: String])
+                let rideData = ride.value as! [String: String]
+                
+                let rideDate = rideData["date"]
+                let ridePass = rideData["pass"]
+                let rideFrom = rideData["from"]
+                let rideTo = rideData["to"]
+            
+                print(date)
+                
+                if rideDate == date && ridePass == pass && rideFrom ==  from && rideTo == to  {
+                    print("match")
+                    //return array of results
+                }
+                
                 
                 
             }

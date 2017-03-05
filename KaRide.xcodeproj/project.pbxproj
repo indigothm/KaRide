@@ -20,6 +20,7 @@
 		4798EFC31E602819000A50FE /* CitySelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4798EFC21E602819000A50FE /* CitySelectionTableViewController.swift */; };
 		4798EFC51E602891000A50FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4798EFC41E602891000A50FE /* Main.storyboard */; };
 		47BBD32E1E6AC3460077E23F /* YourRidesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BBD32D1E6AC3460077E23F /* YourRidesTableViewCell.swift */; };
+		47BBD3321E6C1B210077E23F /* Ride.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BBD3311E6C1B210077E23F /* Ride.swift */; };
 		47E8C3481E6185D000800909 /* ProxiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E8C3471E6185D000800909 /* ProxiHelper.swift */; };
 		47E8C34A1E618CB800800909 /* CitySelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E8C3491E618CB800800909 /* CitySelectionTableViewCell.swift */; };
 		47E8C34C1E61922400800909 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E8C34B1E61922400800909 /* DatePickerViewController.swift */; };
@@ -47,6 +48,7 @@
 		4798EFC21E602819000A50FE /* CitySelectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CitySelectionTableViewController.swift; sourceTree = "<group>"; };
 		4798EFC41E602891000A50FE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		47BBD32D1E6AC3460077E23F /* YourRidesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YourRidesTableViewCell.swift; sourceTree = "<group>"; };
+		47BBD3311E6C1B210077E23F /* Ride.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ride.swift; sourceTree = "<group>"; };
 		47E8C3471E6185D000800909 /* ProxiHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProxiHelper.swift; sourceTree = "<group>"; };
 		47E8C3491E618CB800800909 /* CitySelectionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CitySelectionTableViewCell.swift; sourceTree = "<group>"; };
 		47E8C34B1E61922400800909 /* DatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				47E8C3471E6185D000800909 /* ProxiHelper.swift */,
 				4711E3C31E6591FC00FDC695 /* SearchResultsTableViewController.swift */,
 				47E94FCF1E6681EB00E3E3C9 /* RideTableViewCell.swift */,
+				47BBD3311E6C1B210077E23F /* Ride.swift */,
 			);
 			path = KaRide;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				47E94FD21E66837500E3E3C9 /* YourRidesTableViewController.swift in Sources */,
 				47E8C3481E6185D000800909 /* ProxiHelper.swift in Sources */,
 				47E8C34C1E61922400800909 /* DatePickerViewController.swift in Sources */,
+				47BBD3321E6C1B210077E23F /* Ride.swift in Sources */,
 				47E8C34A1E618CB800800909 /* CitySelectionTableViewCell.swift in Sources */,
 				4711E3C41E6591FC00FDC695 /* SearchResultsTableViewController.swift in Sources */,
 				47E94FD01E6681EB00E3E3C9 /* RideTableViewCell.swift in Sources */,

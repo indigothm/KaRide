@@ -121,7 +121,14 @@ class FindaRideViewController: UIViewController, UpdateViewDelegateProtocol {
         
         if segue.identifier == "showResults" {
             
-            FirebaseHelper.sharedInstance.findARideWithParameters(from: (fromOutlet.titleLabel?.text)!, to: (toOutlet.titleLabel?.text)!, date: (dateOutlet.titleLabel?.text)!, pass: passOutlet.text!)
+            let dateformatter = DateFormatter()
+            dateformatter.dateStyle = DateFormatter.Style.short
+            dateformatter.timeStyle = .none
+            
+            let searchDate = dateformatter.string(from: ProxiHelper.sharedInstance.searchDate)
+
+            
+            FirebaseHelper.sharedInstance.findARideWithParameters(from: (fromOutlet.titleLabel?.text)!, to: (toOutlet.titleLabel?.text)!, date: searchDate, pass: passOutlet.text!)
             
         }
     }
