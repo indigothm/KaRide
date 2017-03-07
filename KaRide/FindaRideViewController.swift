@@ -109,9 +109,9 @@ class FindaRideViewController: UIViewController, UpdateViewDelegateProtocol {
                 
             } else if status {
                 
-                
-                self.performSegue(withIdentifier: "showResults", sender: self)
                 self.results = results
+                self.performSegue(withIdentifier: "showResults", sender: self)
+                
             }
             
             
