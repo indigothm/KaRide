@@ -9,6 +9,8 @@
 import UIKit
 
 class SearchResultsTableViewController: UITableViewController {
+    
+    var results = [Ride]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,13 +36,18 @@ class SearchResultsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 2
+        return results.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ride", for: indexPath) as! RideTableViewCell
 
         // Configure the cell...
+        cell.depTimeLabel.text = results[indexPath.row].depTime
+        cell.arTimeLabel.text = results[indexPath.row].arTime
+        cell.fromLabel.text = results[indexPath.row].from
+        cell.toLabel.text = results[indexPath.row].to
+        cell.priceLabel.text = results[indexPath.row].price
 
         return cell
     }

@@ -461,7 +461,7 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="Yv0-f6-9KL" kind="show" identifier="showResults" id="GFw-gK-wrB"/>
+                                            <action selector="findDidTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g3b-Zo-avS"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -530,6 +530,7 @@
                         <outlet property="passOutlet" destination="vAo-NA-Ph3" id="utb-XM-M0v"/>
                         <outlet property="toImage" destination="s4s-G0-2Ed" id="ZXn-E5-8xI"/>
                         <outlet property="toOutlet" destination="RHg-1x-75J" id="TxA-hc-Phz"/>
+                        <segue destination="Yv0-f6-9KL" kind="show" identifier="showResults" id="flu-k4-Rl5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -1247,7 +1248,12 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="arTimeLabel" destination="o0v-rc-D1Z" id="WpG-07-GPH"/>
                                     <outlet property="avatarOutlet" destination="K5J-JR-THE" id="RMa-f4-BcE"/>
+                                    <outlet property="depTimeLabel" destination="0tu-70-GoY" id="EdJ-t2-80e"/>
+                                    <outlet property="fromLabel" destination="q6W-uE-Pof" id="6tO-zY-T1z"/>
+                                    <outlet property="priceLabel" destination="pFu-kg-EFr" id="jgq-0d-7VC"/>
+                                    <outlet property="toLabel" destination="EuX-rH-EJK" id="3JY-Lm-Dcy"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

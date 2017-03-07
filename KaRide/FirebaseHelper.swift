@@ -41,12 +41,15 @@ class FirebaseHelper {
         
     }
     
-    func findARideWithParameters(from: String, to: String, date: String, pass: String ) {
+    func findARideWithParameters(from: String, to: String, date: String, pass: String, callback: @escaping ( _ s: Bool,
+        _ r: [Ride]) -> Void) {
         
         ref.child("rides").observeSingleEvent(of: .value, with: { (snapshot) in
             
             
             let rides = snapshot.value as? [String : AnyObject]
+            
+            var results = [Ride]()
                         
             
             for ride in rides! {
@@ -63,11 +66,36 @@ class FirebaseHelper {
                 if rideDate == date && ridePass == pass && rideFrom ==  from && rideTo == to  {
                     print("match")
                     //return array of results
+                    
+                    let newRide = Ride(
+                        
+                        from: rideFrom!,
+                        to: rideTo!,
+                        date: rideDate!,
+                        pass: ridePass!,
+                        depTime: rideData["depTime"]!,
+                        arTime: rideData["arTime"]!,
+                        model: rideData["model"]!,
+                        price: rideData["price"]!,
+                        contact: rideData["contact"]!,
+                        driver: rideData["driver"]!
+                    
+                    )
+                    
+                    results.append(newRide)
+                    
                 }
-                
-                
+               
                 
             }
+            
+            if results.count == 0 {
+                print("no match")
+                callback(false, [])
+            } else {
+                callback(true, results)
+            }
+            
             
             // ...
         }) { (error) in

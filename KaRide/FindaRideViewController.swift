@@ -87,7 +87,37 @@ class FindaRideViewController: UIViewController, UpdateViewDelegateProtocol {
         updateView()
         
     }
+    
+    var results = [Ride]()
 
+    @IBAction func findDidTouch(_ sender: Any) {
+        
+        let dateformatter = DateFormatter()
+        dateformatter.dateStyle = DateFormatter.Style.short
+        dateformatter.timeStyle = .none
+        
+        let searchDate = dateformatter.string(from: ProxiHelper.sharedInstance.searchDate)
+        
+        
+        FirebaseHelper.sharedInstance.findARideWithParameters(from: (fromOutlet.titleLabel?.text)!, to: (toOutlet.titleLabel?.text)!, date: searchDate, pass: passOutlet.text!, callback: { status, results in
+            
+            if status == false {
+                
+                let alert = UIAlertController(title: "No rides avaliable", message: "Sorry", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+                
+            } else if status {
+                
+                
+                self.performSegue(withIdentifier: "showResults", sender: self)
+                self.results = results
+            }
+            
+            
+        })
+        
+    }
     
     // MARK: - Navigation
 
@@ -121,14 +151,9 @@ class FindaRideViewController: UIViewController, UpdateViewDelegateProtocol {
         
         if segue.identifier == "showResults" {
             
-            let dateformatter = DateFormatter()
-            dateformatter.dateStyle = DateFormatter.Style.short
-            dateformatter.timeStyle = .none
+          let controller = segue.destination as! SearchResultsTableViewController
             
-            let searchDate = dateformatter.string(from: ProxiHelper.sharedInstance.searchDate)
-
-            
-            FirebaseHelper.sharedInstance.findARideWithParameters(from: (fromOutlet.titleLabel?.text)!, to: (toOutlet.titleLabel?.text)!, date: searchDate, pass: passOutlet.text!)
+            controller.results = self.results
             
         }
     }

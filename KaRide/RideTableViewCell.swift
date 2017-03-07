@@ -11,6 +11,12 @@ import UIKit
 class RideTableViewCell: UITableViewCell {
 
     @IBOutlet weak var avatarOutlet: UIImageView!
+    @IBOutlet weak var depTimeLabel: UILabel!
+    @IBOutlet weak var arTimeLabel: UILabel!
+    @IBOutlet weak var fromLabel: UILabel!
+    @IBOutlet weak var toLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
