@@ -21,6 +21,10 @@ class Ride {
     var model: String
     var price: String
     
+    //extra
+    var name: String!
+    var photo: String!
+    
     init(
         from: String,
         to: String,

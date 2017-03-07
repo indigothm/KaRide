@@ -15,6 +15,8 @@
 		472E29AE1E61332500282919 /* OfferaRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472E29AD1E61332500282919 /* OfferaRideViewController.swift */; };
 		472E29B41E61436800282919 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472E29B31E61436800282919 /* PickerViewController.swift */; };
 		473047231E6E869B00F6D268 /* PreBookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473047221E6E869B00F6D268 /* PreBookingViewController.swift */; };
+		473047251E6E9AEA00F6D268 /* PhotoDownloadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473047241E6E9AEA00F6D268 /* PhotoDownloadHelper.swift */; };
+		473047271E6E9C5300F6D268 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473047261E6E9C5300F6D268 /* User.swift */; };
 		4798EFAF1E602081000A50FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4798EFAE1E602081000A50FE /* AppDelegate.swift */; };
 		4798EFB61E602081000A50FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4798EFB51E602081000A50FE /* Assets.xcassets */; };
 		4798EFB91E602081000A50FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4798EFB71E602081000A50FE /* LaunchScreen.storyboard */; };
@@ -42,6 +44,8 @@
 		472E29AD1E61332500282919 /* OfferaRideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferaRideViewController.swift; sourceTree = "<group>"; };
 		472E29B31E61436800282919 /* PickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		473047221E6E869B00F6D268 /* PreBookingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreBookingViewController.swift; sourceTree = "<group>"; };
+		473047241E6E9AEA00F6D268 /* PhotoDownloadHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDownloadHelper.swift; sourceTree = "<group>"; };
+		473047261E6E9C5300F6D268 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4798EFAB1E602081000A50FE /* KaRide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KaRide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4798EFAE1E602081000A50FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4798EFB51E602081000A50FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -124,11 +128,13 @@
 				4798EFB71E602081000A50FE /* LaunchScreen.storyboard */,
 				4798EFBA1E602081000A50FE /* Info.plist */,
 				472E29AB1E612BE300282919 /* FirebaseHelper.swift */,
+				473047241E6E9AEA00F6D268 /* PhotoDownloadHelper.swift */,
 				472E29B31E61436800282919 /* PickerViewController.swift */,
 				47E8C3471E6185D000800909 /* ProxiHelper.swift */,
 				4711E3C31E6591FC00FDC695 /* SearchResultsTableViewController.swift */,
 				47E94FCF1E6681EB00E3E3C9 /* RideTableViewCell.swift */,
 				47BBD3311E6C1B210077E23F /* Ride.swift */,
+				473047261E6E9C5300F6D268 /* User.swift */,
 			);
 			path = KaRide;
 			sourceTree = "<group>";
@@ -277,6 +283,7 @@
 				47E8C34A1E618CB800800909 /* CitySelectionTableViewCell.swift in Sources */,
 				4711E3C41E6591FC00FDC695 /* SearchResultsTableViewController.swift in Sources */,
 				47E94FD01E6681EB00E3E3C9 /* RideTableViewCell.swift in Sources */,
+				473047251E6E9AEA00F6D268 /* PhotoDownloadHelper.swift in Sources */,
 				47BBD32E1E6AC3460077E23F /* YourRidesTableViewCell.swift in Sources */,
 				472E29AC1E612BE300282919 /* FirebaseHelper.swift in Sources */,
 				472E29A81E61138200282919 /* LoginViewController.swift in Sources */,
@@ -286,6 +293,7 @@
 				4798EFAF1E602081000A50FE /* AppDelegate.swift in Sources */,
 				47E94FCE1E667F1400E3E3C9 /* DateHeaderTableViewCell.swift in Sources */,
 				4798EFC31E602819000A50FE /* CitySelectionTableViewController.swift in Sources */,
+				473047271E6E9C5300F6D268 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

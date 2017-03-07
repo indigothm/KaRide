@@ -48,8 +48,28 @@ class SearchResultsTableViewController: UITableViewController {
         cell.fromLabel.text = results[indexPath.row].from
         cell.toLabel.text = results[indexPath.row].to
         cell.priceLabel.text = results[indexPath.row].price
+        
+        let driver = FirebaseHelper.sharedInstance.getUserFromID(id: results[indexPath.row].driver, callback: {
+            user in
+            
+            cell.avatarOutlet.downloadedFrom(link: user.Photo)
+            cell.nameOutlet.text = user.Name
+            
+            self.results[indexPath.row].name = user.Name
+            self.results[indexPath.row].photo = user.Photo
+        })
+        
 
         return cell
+    }
+    
+    var selectedRide: Ride!
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        selectedRide = results[indexPath.row]
+        performSegue(withIdentifier: "booking", sender: self)
+        
     }
     
 
@@ -88,14 +108,19 @@ class SearchResultsTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "booking" {
+            let controller = segue.destination as! PreBookingViewController
+            controller.rideObject = selectedRide
+        }
     }
-    */
+    
 
 }

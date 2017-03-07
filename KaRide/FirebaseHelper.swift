@@ -41,6 +41,20 @@ class FirebaseHelper {
         
     }
     
+    func getUserFromID(id: String, callback: @escaping (User) -> Void) {
+    
+        ref.child("Users").child(id).child("Public").observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            let output = snapshot.value as! [String : AnyObject]
+            let user = User(id: output["FacebookID"] as! String, name: output["name"] as! String, photo: output["photo"] as! String)
+            
+            callback(user)
+            
+            
+            
+        })
+    }
+    
     func findARideWithParameters(from: String, to: String, date: String, pass: String, callback: @escaping ( _ s: Bool,
         _ r: [Ride]) -> Void) {
         

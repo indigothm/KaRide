@@ -16,6 +16,7 @@ class RideTableViewCell: UITableViewCell {
     @IBOutlet weak var fromLabel: UILabel!
     @IBOutlet weak var toLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var nameOutlet: UILabel!
     
     
     override func awakeFromNib() {
