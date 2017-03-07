@@ -14,6 +14,7 @@
 		472E29AC1E612BE300282919 /* FirebaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472E29AB1E612BE300282919 /* FirebaseHelper.swift */; };
 		472E29AE1E61332500282919 /* OfferaRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472E29AD1E61332500282919 /* OfferaRideViewController.swift */; };
 		472E29B41E61436800282919 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472E29B31E61436800282919 /* PickerViewController.swift */; };
+		473047231E6E869B00F6D268 /* PreBookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473047221E6E869B00F6D268 /* PreBookingViewController.swift */; };
 		4798EFAF1E602081000A50FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4798EFAE1E602081000A50FE /* AppDelegate.swift */; };
 		4798EFB61E602081000A50FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4798EFB51E602081000A50FE /* Assets.xcassets */; };
 		4798EFB91E602081000A50FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4798EFB71E602081000A50FE /* LaunchScreen.storyboard */; };
@@ -40,6 +41,7 @@
 		472E29AB1E612BE300282919 /* FirebaseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseHelper.swift; sourceTree = "<group>"; };
 		472E29AD1E61332500282919 /* OfferaRideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferaRideViewController.swift; sourceTree = "<group>"; };
 		472E29B31E61436800282919 /* PickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
+		473047221E6E869B00F6D268 /* PreBookingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreBookingViewController.swift; sourceTree = "<group>"; };
 		4798EFAB1E602081000A50FE /* KaRide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KaRide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4798EFAE1E602081000A50FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4798EFB51E602081000A50FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				4798EFC21E602819000A50FE /* CitySelectionTableViewController.swift */,
 				4798EFAE1E602081000A50FE /* AppDelegate.swift */,
 				4798EFC41E602891000A50FE /* Main.storyboard */,
+				473047221E6E869B00F6D268 /* PreBookingViewController.swift */,
 				47E94FD11E66837500E3E3C9 /* YourRidesTableViewController.swift */,
 				47BBD32D1E6AC3460077E23F /* YourRidesTableViewCell.swift */,
 				47E8C3511E62A93A00800909 /* TimePickerViewController.swift */,
@@ -269,6 +272,7 @@
 				47E94FD21E66837500E3E3C9 /* YourRidesTableViewController.swift in Sources */,
 				47E8C3481E6185D000800909 /* ProxiHelper.swift in Sources */,
 				47E8C34C1E61922400800909 /* DatePickerViewController.swift in Sources */,
+				473047231E6E869B00F6D268 /* PreBookingViewController.swift in Sources */,
 				47BBD3321E6C1B210077E23F /* Ride.swift in Sources */,
 				47E8C34A1E618CB800800909 /* CitySelectionTableViewCell.swift in Sources */,
 				4711E3C41E6591FC00FDC695 /* SearchResultsTableViewController.swift in Sources */,
