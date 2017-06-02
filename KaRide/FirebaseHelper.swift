@@ -55,6 +55,51 @@ class FirebaseHelper {
         })
     }
     
+    func getYourRides(userID: String, callback: @escaping (_ results: [Ride]) -> Void ) {
+    
+        ref.child("rides").observeSingleEvent(of: .value, with: { (snapshot) in
+        
+        
+             let rides = snapshot.value as? [String : AnyObject]
+             var results = [Ride]()
+            
+            for ride in rides! {
+                
+                let rideData = ride.value as! [String: String]
+                
+                let rideDriver = rideData["driver"]
+                let rideDate = rideData["date"]
+                let ridePass = rideData["pass"]
+                let rideFrom = rideData["from"]
+                let rideTo = rideData["to"]
+                
+                if rideDriver == userID {
+                    
+                    let newRide = Ride(
+                        
+                        from: rideFrom!,
+                        to: rideTo!,
+                        date: rideDate!,
+                        pass: ridePass!,
+                        depTime: rideData["depTime"]!,
+                        arTime: rideData["arTime"]!,
+                        model: rideData["model"]!,
+                        price: rideData["price"]!,
+                        contact: rideData["contact"]!,
+                        driver: rideData["driver"]!
+                        
+                    )
+                    
+                    results.append(newRide)
+                    
+                }
+                
+            }
+            
+        })
+        
+    }
+    
     func findARideWithParameters(from: String, to: String, date: String, pass: String, callback: @escaping ( _ s: Bool,
         _ r: [Ride]) -> Void) {
         

@@ -72,7 +72,7 @@ class OfferDetailsViewController: UIViewController, UpdateViewDelegateProtocol, 
     
     @IBAction func createRideDidTouch(_ sender: Any) {
         
-        if contactOutlet.text != nil && carModelOutlet.textColor != nil {
+        if contactOutlet.text != nil && carModelOutlet.text != nil && depOutlet.currentTitle != "Departure Time" && arOutlet.currentTitle != "Arrival Time" {
             
             ProxiHelper.sharedInstance.offerModel = carModelOutlet.text!
             
@@ -98,7 +98,16 @@ class OfferDetailsViewController: UIViewController, UpdateViewDelegateProtocol, 
                 model: ProxiHelper.sharedInstance.offerModel!,
                 contact: ProxiHelper.sharedInstance.offerContact!)
             
+            performSegue(withIdentifier: "confirm", sender: nil)
+        } else {
+        
+            let alert = UIAlertController(title: "Error", message: "Please fill in all the fields", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Continue", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            
         }
+        
+        
         
     }
 

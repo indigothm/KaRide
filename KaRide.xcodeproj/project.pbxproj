@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		30EC703C5AD4CE4E73C218D2 /* Pods_KaRide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4D569592FE824C433507E56 /* Pods_KaRide.framework */; };
 		4711E3C41E6591FC00FDC695 /* SearchResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4711E3C31E6591FC00FDC695 /* SearchResultsTableViewController.swift */; };
+		471A3F9B1EE1079200DAC034 /* PublishedConfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471A3F9A1EE1079200DAC034 /* PublishedConfViewController.swift */; };
 		472E29A81E61138200282919 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472E29A71E61138200282919 /* LoginViewController.swift */; };
 		472E29AA1E61152100282919 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 472E29A91E61152100282919 /* GoogleService-Info.plist */; };
 		472E29AC1E612BE300282919 /* FirebaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472E29AB1E612BE300282919 /* FirebaseHelper.swift */; };
@@ -38,6 +39,7 @@
 /* Begin PBXFileReference section */
 		2E5812C8B64CE161BDB06B3E /* Pods-KaRide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KaRide.release.xcconfig"; path = "Pods/Target Support Files/Pods-KaRide/Pods-KaRide.release.xcconfig"; sourceTree = "<group>"; };
 		4711E3C31E6591FC00FDC695 /* SearchResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsTableViewController.swift; sourceTree = "<group>"; };
+		471A3F9A1EE1079200DAC034 /* PublishedConfViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishedConfViewController.swift; sourceTree = "<group>"; };
 		472E29A71E61138200282919 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		472E29A91E61152100282919 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		472E29AB1E612BE300282919 /* FirebaseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseHelper.swift; sourceTree = "<group>"; };
@@ -46,6 +48,7 @@
 		473047221E6E869B00F6D268 /* PreBookingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreBookingViewController.swift; sourceTree = "<group>"; };
 		473047241E6E9AEA00F6D268 /* PhotoDownloadHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDownloadHelper.swift; sourceTree = "<group>"; };
 		473047261E6E9C5300F6D268 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		477B96161E765F50009D15B0 /* KaRide.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KaRide.entitlements; sourceTree = "<group>"; };
 		4798EFAB1E602081000A50FE /* KaRide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KaRide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4798EFAE1E602081000A50FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4798EFB51E602081000A50FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -109,10 +112,12 @@
 		4798EFAD1E602081000A50FE /* KaRide */ = {
 			isa = PBXGroup;
 			children = (
+				477B96161E765F50009D15B0 /* KaRide.entitlements */,
 				472E29A91E61152100282919 /* GoogleService-Info.plist */,
 				4798EFC21E602819000A50FE /* CitySelectionTableViewController.swift */,
 				4798EFAE1E602081000A50FE /* AppDelegate.swift */,
 				4798EFC41E602891000A50FE /* Main.storyboard */,
+				471A3F9A1EE1079200DAC034 /* PublishedConfViewController.swift */,
 				473047221E6E869B00F6D268 /* PreBookingViewController.swift */,
 				47E94FD11E66837500E3E3C9 /* YourRidesTableViewController.swift */,
 				47BBD32D1E6AC3460077E23F /* YourRidesTableViewCell.swift */,
@@ -185,6 +190,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = DJE44ZPPJW;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplePay = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -282,6 +292,7 @@
 				47BBD3321E6C1B210077E23F /* Ride.swift in Sources */,
 				47E8C34A1E618CB800800909 /* CitySelectionTableViewCell.swift in Sources */,
 				4711E3C41E6591FC00FDC695 /* SearchResultsTableViewController.swift in Sources */,
+				471A3F9B1EE1079200DAC034 /* PublishedConfViewController.swift in Sources */,
 				47E94FD01E6681EB00E3E3C9 /* RideTableViewCell.swift in Sources */,
 				473047251E6E9AEA00F6D268 /* PhotoDownloadHelper.swift in Sources */,
 				47BBD32E1E6AC3460077E23F /* YourRidesTableViewCell.swift in Sources */,

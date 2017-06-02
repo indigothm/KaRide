@@ -8,12 +8,12 @@
 //
 
 import UIKit
-
 class PreBookingViewController: UIViewController {
-
-    @IBOutlet weak var avatarOutlet: UIImageView!
-    var rideObject: Ride!
     
+    // MARK: STPPaymentContextDelegate
+    
+    @IBOutlet weak var avatarOutlet: UIImageView!
+    var rideObject: Ride!    
     //Outlets
     
     @IBOutlet weak var nameOutlet: UILabel!
@@ -48,6 +48,11 @@ class PreBookingViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func bookDidTouch(_ sender: Any) {
+        
+        
+    }
+   
 
     /*
     // MARK: - Navigation

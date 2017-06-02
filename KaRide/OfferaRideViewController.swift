@@ -17,6 +17,10 @@ class OfferaRideViewController: UIViewController, UpdateViewDelegateProtocol {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func prepareForUnwind(segue: UIStoryboardSegue){
+        
+    }
+    
     func updateView() {
     
         if let fromVal = ProxiHelper.sharedInstance.offerFrom {
